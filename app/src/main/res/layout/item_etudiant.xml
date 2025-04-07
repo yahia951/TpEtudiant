@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp">
+
+    <!-- Image à gauche -->
+    <ImageView
+        android:id="@+id/image_etudiant"
+        android:layout_width="91dp"
+        android:layout_height="113dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"
+        android:background="#EEEEEE"
+        android:contentDescription="Photo de l'étudiant"
+        android:scaleType="centerCrop" />
+
+    <!-- Informations de l'étudiant à droite -->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/input_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="ID"
+            android:textSize="14sp" />
+
+        <!-- Nouveau LinearLayout pour le nom et le prénom sur la même ligne -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/input_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/input_prenom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Prénom"
+                android:textSize="16sp"
+                android:textStyle="bold" /> <!-- Espace entre le nom et le prénom -->
+        </LinearLayout>
+
+        <!-- Texte "Né le:" et la date de naissance sur la même ligne -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_ne_le"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Né le:"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/text_date_naissance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Date de naissance"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="italic" /> <!-- Espace entre "Né le:" et la date -->
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
